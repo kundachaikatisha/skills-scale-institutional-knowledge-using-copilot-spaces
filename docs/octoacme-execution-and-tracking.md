@@ -10,6 +10,8 @@ Guidance for managing day-to-day execution and tracking progress toward project 
 
 ## Workflows
 - Use the project board (e.g., GitHub Projects) with columns: Backlog, Ready, In Progress, In Review, QA, Done
+  - The **QA column** is owned by the QA Lead. Items move to QA after code review is complete and CI passes.
+  - The **DevOps Engineer** is responsible for CI/CD pipeline health; coordinate with them on environment or pipeline blockers.
 - Pull Request workflow:
   - Small PRs (<= 400 lines when possible)
   - Include issue link and acceptance criteria in PR description
@@ -22,6 +24,9 @@ Guidance for managing day-to-day execution and tracking progress toward project 
 - End-to-end smoke tests for critical flows before release
 - Security scanning in CI
 - Manual QA for feature acceptance when needed
+- **QA Lead** owns the test plan and quality gates; provides sign-off before items move to Done or to release. See [octoacme-roles-and-personas.md](./octoacme-roles-and-personas.md) for the full QA Lead role description.
+- **DevOps Engineer** integrates security, performance, and quality scanning into the CI/CD pipeline. See [octoacme-roles-and-raci.md](./octoacme-roles-and-raci.md) for accountability assignments.
+- Quality gate: no feature moves from QA to Done without QA Lead sign-off.
 
 ## Reporting & Metrics
 - Track velocity and burndown
